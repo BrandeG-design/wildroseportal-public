@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Page Wrapper ── */
+.page-wrapper {
+    max-width: 600px;
+    width: 100%;
+    margin: 3em auto 0;
+    padding: 0 2em 5em;
+    flex: 1;
+}
+
+/* ── Page Title — 40px spec ── */
+.page-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.5px;
+}
+
+/* 12px spec */
+.page-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 2em;
+    line-height: 1.6;
+}
+
+/* ── Section Card ── */
+.section-card {
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 10px;
+    padding: 1.5em 1.75em 1.75em;
+    margin-bottom: 1.75em;
+}
+
+/* ── Subheader — 20px spec ── */
+.section-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1E3A5F;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #d0dcea;
+}
+
+/* ── Warning notice (confirm step) ── */
+.warning-notice {
+    background: #fff8e8;
+    border: 1px solid #f0d080;
+    border-radius: 8px;
+    padding: 0.875em 1em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875em;
+    color: #7a5500;
+    margin-bottom: 1.25em;
+    line-height: 1.6;
+}
+
+/* ── Error Alert ── */
+.error-alert {
+    background: #fff0f0;
+    border: 1px solid #f5c2c2;
+    border-radius: 8px;
+    padding: 0.75em 1em;
+    font-size: 0.8125em;
+    color: #b00020;
+    margin-bottom: 1.25em;
+}
+
+/* ── Form Fields ── */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375em;
+    margin-bottom: 1.25em;
+}
+
+.form-field:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Labels — 14px spec */
+.field-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Inputs — 16px Verdana spec */
+.field-input {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    color: #1a1a1a;
+    border: 1px solid #d0dcea;
+    border-radius: 25px;
+    padding: 0.625em 0.875em;
+    background: #f5f7fa;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.field-input:focus {
+    border-color: #1E3A5F;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.showpsw {
+    position: absolute;
+    right: 0.875em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8125em;
+    font-weight: 500;
+    color: #767676;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.showpsw:hover {   /* ← was .showpwd */
+    color: #1E3A5F;
+}
+
+/* ── Form Actions ── */
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1.5em;
+    flex-wrap: wrap;
+}
+
+/* ── Buttons — 25px radius ── */
+.primary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1E3A5F;
+    background: #1E3A5F;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.primary-btn:hover {
+    background: #16304f;
+    border-color: #16304f;
+}
+
+.secondary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+.danger-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #b00020;
+    background: #b00020;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.danger-btn:hover {
+    background: #8c0018;
+    border-color: #8c0018;
+}
+
+/* ── Back Button ── */
+.back-btn-wrapper {
+    margin-top: 0.5em;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5C5656;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    .nav-bar { padding: 0.75em 1.25em; }
+
+    .page-wrapper {
+        margin-top: 1.75em;
+        padding: 0 1em 3.75em;
+    }
+
+    .page-title { font-size: 28px; }
+    .section-heading { font-size: 18px; }
+
+    .section-card {
+        padding: 1.125em 1em 1.25em;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions .primary-btn,
+    .form-actions .secondary-btn,
+    .form-actions .danger-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .back-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.75em;
+    }
+}

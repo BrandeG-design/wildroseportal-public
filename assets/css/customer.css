@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Page Wrapper ── */
+.page-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 3em auto 0;
+    padding: 0 2em 5em;
+    flex: 1;
+}
+
+/* ── Page Title — 40px spec ── */
+.page-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 1.5em;
+    letter-spacing: -0.5px;
+}
+
+/* ── Section Card ── */
+.section-card {
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 10px;
+    padding: 1.5em 1.75em 1.75em;
+    margin-bottom: 1.75em;
+}
+
+/* ── Subheader — 20px spec ── */
+.section-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1e3a5f;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #d0dcea;
+}
+
+/* ── Form Grid ── */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25em 2em;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375em;
+}
+
+.form-field.full-width {
+    grid-column: 1 / -1;
+}
+
+/* Labels — 14px spec */
+.field-label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Inputs — 16px Verdana spec */
+.field-input {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    color: #1a1a1a;
+    border: 1px solid #d0dcea;
+    border-radius: 25px;
+    padding: 0.625em 0.875em;
+    background: #f5f7fa;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+    width: 100%;
+}
+
+.field-input:focus {
+    border-color: #1e3a5f;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.field-input:invalid:not(:placeholder-shown) {
+    border-color: #e07070;
+}
+
+/* ── Return notice ── */
+.return-notice {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;      
+    font-size: 20px;       
+    color: #b00020;        
+    margin-bottom: 1.5em;
+    letter-spacing: -0.5px;
+}
+
+/* ── Form Actions ── */
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+/* ── Buttons — 25px radius ── */
+.primary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1e3a5f;
+    background: #1e3a5f;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+.primary-btn:hover {
+    background: #16304f;
+    border-color: #16304f;
+}
+
+.danger-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 1px solid #e0a0a0;
+    background: #fff0f0;
+    color: #b00020;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.danger-btn:hover {
+    background: #ffd6d6;
+    border-color: #b00020;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5c5656;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 0.75em 1.25em;
+    }
+
+    .page-wrapper {
+        margin-top: 1.75em;
+        padding: 0 1em 3.75em;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+    .section-heading {
+        font-size: 18px;
+    }
+
+    .section-card {
+        padding: 1.125em 1em 1.25em;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions .primary-btn,
+    .form-actions .danger-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ── Required Field Asterisk ── */
+.required-star {
+    color: #c0392b;
+    margin-left: 0.2em;
+    font-weight: 600;
+}
+
+/* ── Checkbox Row (toggle fields like no-email) ── */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.875em;
+    color: #1a1a1a;
+    cursor: pointer;
+    margin-top: 0.5em;
+}
+
+.checkbox-row input[type="checkbox"] {
+    accent-color: #1e3a5f;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.checkbox-row label {
+    cursor: pointer;
+}

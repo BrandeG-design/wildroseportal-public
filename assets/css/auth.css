@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EDF2F7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+/* ── Header / AltisMSP Logo ── */
+.header-container img {
+    height: auto;
+    width: 19%;
+    display: block;
+    margin: auto;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+/* ── Page Title — 40px spec ── */
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 0.75em;
+    text-align: center;
+}
+
+/* ── Error Message ── */
+.error-alert {
+    background: #fff0f0;
+    border: 1px solid #f5c2c2;
+    border-radius: 8px;
+    padding: 0.75em 1em;
+    font-size: 0.8125em;
+    color: #b00020;
+    margin-bottom: 1.25em;
+    text-align: center;
+    width: 34.375em; /* ~550px */
+}
+
+/* ── Form ── */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Labels — 16px Roboto medium */
+.label {
+    display: block;
+    text-align: left;
+    width: 34.375em; /* ~550px */
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.375em;
+}
+
+/* Inputs — Verdana 16px */
+.input {
+    height: 2.75em;
+    width: 34.375em; /* ~550px */
+    border-radius: 8px;
+    border: 1px solid #d0dcea;
+    padding: 0 0.875em;
+    font-size: 1em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: normal;
+    margin-bottom: 1.125em;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+    border-color: #1E3A5F;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.password-input {
+    position: relative;
+    width: 34.375em;
+    margin-bottom: 1.125em;
+}
+
+.password-input .input {
+    width: 100%;
+    margin-bottom: 0;
+    padding-right: 4em;
+}
+
+.showpsw {
+    position: absolute;
+    right: 0.875em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8125em;
+    font-weight: 500;
+    color: #767676;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.showpsw:hover {   /* ← was .showpwd */
+    color: #1E3A5F;
+}
+
+/* ── Log In Button ── */
+.login {
+    color: #ffffff;
+    background-color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 0.75em;
+    height: 2.875em;
+    width: 21.875em; /* ~350px */
+    border-radius: 26px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login:hover {
+    background-color: #16304f;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5C5656;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 6em;
+        padding-bottom: 5em;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-top: 1em;
+    }
+
+    .label,
+    .error-alert {
+        width: 90vw;
+    }
+
+    .input {
+        width: 90vw;
+    }
+
+    .login {
+        width: 90vw;
+    }
+}

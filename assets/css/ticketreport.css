@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Page Wrapper ── */
+.page-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 3em auto 0;
+    padding: 0 2em 5em;
+    flex: 1;
+}
+
+/* ── Page Title — 40px spec ── */
+.page-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 0.1em;
+    letter-spacing: -0.5px;
+}
+
+.page-date {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    color: #888;
+    margin-bottom: 2.5em;
+}
+
+/* ── Section Card ── */
+.section-card {
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 10px;
+    padding: 1.5em 1.75em 1.75em;
+    margin-bottom: 1.75em;
+}
+
+/* ── Subheaders — 20px spec ── */
+.section-heading {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1e3a5f;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #d0dcea;
+}
+
+/* ── Info Grid ── */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25em 2em;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+/* Labels — 14px spec */
+.info-label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Field values — 16px spec */
+.info-value {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+/* ── Staff Notes full-width ── */
+.info-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-value.notes {
+    background: #f5f7fa;
+    border: 1px solid #e0e6ef;
+    border-radius: 6px;
+    padding: 0.625em 0.875em;
+    min-height: 60px;
+    white-space: pre-wrap;
+}
+
+/* ── Device Photos ── */
+.photo-count {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    color: #888;
+    margin-bottom: 0.875em;
+}
+
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+}
+
+.photo-grid img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e6ef;
+}
+
+.no-data {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.875em;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* ── Signature ── */
+.signature-img {
+    display: block;
+    max-width: 320px;
+    border: 1px solid #e0e6ef;
+    border-radius: 8px;
+    background: #fafafa;
+    padding: 0.5em;
+}
+
+/* ── Print Label ── */
+.print-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    margin-top: 0.25em;
+    flex-wrap: wrap;
+}
+
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #1e3a5f;
+    background: transparent;
+    color: #1e3a5f;
+    font-size: 1.125em;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.qty-btn:hover {
+    background: #1e3a5f;
+    color: #fff;
+}
+
+.qty-input {
+    width: 48px;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    border: 1px solid #d0dcea;
+    border-radius: 6px;
+    padding: 0.25em 0;
+    color: #1a1a1a;
+    background: #f5f7fa;
+}
+
+/* Print btn — 25px radius */
+.print-btn {
+    padding: 0.5em 1.375em;
+    border-radius: 25px;
+    border: 2px solid #1e3a5f;
+    background: transparent;
+    color: #1e3a5f;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.875em;
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s;
+    margin-left: 0.5em;
+}
+
+.print-btn:hover {
+    background: #1e3a5f;
+    color: #fff;
+}
+
+/* ── Back Button ── */
+.back-btn-wrapper {
+    margin-top: 2.25em;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #1e3a5f;
+    background: transparent;
+    color: #1e3a5f;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+
+.back-btn:hover {
+    background: #1e3a5f;
+    color: #fff;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5c5656;
+}
+
+/* ── Action Button Row (Print / Export) ── */
+.action-btn-row {
+    display: flex;
+    gap: 0.75em;
+    flex-wrap: wrap;
+    margin-bottom: 1.75em;
+}
+
+/* Secondary button — stroked blue, 25px radius */
+.secondary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1e3a5f;
+    background: transparent;
+    color: #1e3a5f;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #1e3a5f;
+    color: #ffffff;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    .nav-bar {
+        padding: 0.75em 1.25em;
+    }
+
+    .page-wrapper {
+        margin-top: 1.75em;
+        padding: 0 1em 3.75em;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+    .section-heading {
+        font-size: 18px;
+    }
+
+    .section-card {
+        padding: 1.125em 1em 1.25em;
+        overflow-x: auto;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .photo-grid img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .print-label-row {
+        gap: 0.5em;
+    }
+
+    .back-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.75em;
+    }
+}
+
+
+/* ── Print Styles ─────────────────────────────────────────────────────────────
+   Hides nav, buttons, photos, print label section, and footer.
+   Keeps customer info, device info, and signature for a clean one-page printout.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media print {
+    .no-print,
+    .nav-bar,
+    .action-btn-row,
+    .print-label-row,
+    footer {
+        display: none !important;
+    }
+
+    /* Hide photos and print label section cards entirely */
+    .section-card:has(.photo-grid),
+    .section-card:has(.photo-count),
+    .section-card:has(.print-label-row) {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff;
+        font-size: 12px;
+    }
+
+    .page-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0.5cm 1cm;
+    }
+
+    .page-title { font-size: 22px; }
+    .page-date  { margin-bottom: 1em; }
+
+    .section-card {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5em 0.75em;
+        margin-bottom: 0.5em;
+        page-break-inside: avoid;
+    }
+
+    .section-heading {
+        font-size: 13px;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.25em;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4em 1em;
+    }
+
+    .info-label { font-size: 9px;  color: #555; }
+    .info-value { font-size: 12px; color: #000; }
+
+    .info-value.notes {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    /* Signature — keep it but constrain size for print */
+    .signature-img {
+        max-width: 220px;
+    }
+}

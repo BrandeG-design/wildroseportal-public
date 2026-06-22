@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Page Wrapper ── */
+.page-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 3em auto 0;
+    padding: 0 2em 5em;
+    flex: 1;
+}
+
+/* ── Page Title — 40px spec ── */
+.page-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 1.75em;
+    letter-spacing: -0.5px;
+}
+
+/* ── Search ── */
+.search-wrapper {
+    margin-bottom: 0.375em;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75em 1em;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    color: #1a1a1a;
+    border: 1px solid #d0dcea;
+    border-radius: 25px;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+    border-color: #1E3A5F;
+    box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+/* 12px spec */
+.search-hint {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 1.75em;
+    margin-top: 0.375em;
+}
+
+/* ── Section Cards ── */
+.section-card {
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 10px;
+    padding: 1.5em 1.75em 1.75em;
+    margin-bottom: 1.75em;
+}
+
+/* ── Subheaders — 20px spec ── */
+.section-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1E3A5F;
+    margin-bottom: 1em;
+    padding-bottom: 0.625em;
+    border-bottom: 1px solid #d0dcea;
+}
+
+/* ── Ticket Table ── */
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.875em;
+}
+
+/* 14px spec */
+.ticket-table thead th {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #767676;
+    text-align: left;
+    padding: 0.5em 0.875em;
+    border-bottom: 2px solid #e0e6ef;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.ticket-table tbody tr.clickable-row {
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.ticket-table tbody tr {
+    transition: background 0.15s;
+}
+
+.ticket-table tbody tr:hover {
+    background-color: #f0f4f9;
+}
+
+.ticket-table tbody td {
+    padding: 0.75em 0.875em;
+    border-bottom: 1px solid #eef0f4;
+    color: #1a1a1a;
+    vertical-align: middle;
+}
+
+.ticket-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ticket # badge */
+.ticket-num {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 0.8125em;
+    color: #1E3A5F;
+    background: #e8eef6;
+    padding: 0.1875em 0.5em;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.ticket-table a {
+    color: #1E3A5F;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.ticket-table a:hover {
+    text-decoration: underline;
+}
+
+/* ── Search Results ── */
+#search-results {
+    margin-bottom: 1.75em;
+}
+
+/* ── Empty / No Results ── */
+.no-results {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.875em;
+    color: #aaa;
+    font-style: italic;
+    padding: 0.5em 0;
+}
+
+/* ── Back Button ── */
+.back-btn-wrapper {
+    margin-top: 0.5em;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5C5656;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    .nav-bar { padding: 0.75em 1.25em; }
+
+    .page-wrapper {
+        margin-top: 1.75em;
+        padding: 0 1em 3.75em;
+    }
+
+    .page-title { font-size: 28px; }
+    .section-heading { font-size: 18px; }
+
+    .section-card {
+        padding: 1.125em 1em 1.25em;
+        overflow-x: auto;
+    }
+
+    .ticket-table {
+        min-width: 480px;
+    }
+
+    .ticket-table thead th,
+    .ticket-table tbody td {
+        padding: 0.625em;
+        font-size: 13px;
+    }
+
+    .back-btn-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.75em;
+    }
+}

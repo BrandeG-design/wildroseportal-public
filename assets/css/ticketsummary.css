@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #2c2c2c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+}
+
+/* ── Nav Bar ── */
+.nav-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e6ef;
+    padding: 0.875em 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* ── Page Wrapper ── */
+.page-wrapper {
+    max-width: 900px;
+    width: 100%;
+    margin: 3em auto 0;
+    padding: 0 2em 5em;
+    flex: 1;
+}
+
+/* ── Page Title — 40px spec ── */
+.page-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: #1a1a1a;
+    margin-bottom: 1.5em;
+    letter-spacing: -0.5px;
+}
+
+/* ── Error Alert ── */
+.error-alert {
+    background: #fff0f0;
+    border: 1px solid #f5c2c2;
+    border-radius: 8px;
+    padding: 0.75em 1em;
+    font-size: 0.8125em;
+    color: #b00020;
+    margin-bottom: 1.25em;
+}
+
+/* ── Section Cards ── */
+.section-card {
+    background: #ffffff;
+    border: 1px solid #e0e6ef;
+    border-radius: 10px;
+    padding: 1.5em 1.75em 1.75em;
+    margin-bottom: 1.75em;
+}
+
+/* ── Subheaders — 20px spec ── */
+.section-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #1E3A5F;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #d0dcea;
+}
+
+/* ── Customer/Device Info Grid ── */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25em 2em;
+}
+
+.info-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+/* Labels — 14px spec */
+.info-label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #767676;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Field values — 16px Verdana spec */
+.info-value {
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1a1a1a;
+    line-height: 1.4;
+}
+
+.info-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-value.notes {
+    background: #f5f7fa;
+    border: 1px solid #e0e6ef;
+    border-radius: 6px;
+    padding: 0.625em 0.875em;
+    min-height: 60px;
+    white-space: pre-wrap;
+}
+
+/* Customer type badge */
+.customer-badge {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.75em;
+    color: #1E3A5F;
+    background: #e8eef6;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* ── Device Photos ── */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75em;
+}
+
+.photo-grid img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e0e6ef;
+}
+
+.no-data {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.875em;
+    color: #aaa;
+    font-style: italic;
+}
+
+/* ── Terms & Conditions ── */
+.terms-box {
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.8125em;
+    color: #444;
+    line-height: 1.7;
+    background: #f5f7fa;
+    border: 1px solid #e0e6ef;
+    border-radius: 6px;
+    padding: 0.875em 1em;
+    resize: none;
+    outline: none;
+    min-height: 160px;
+}
+
+/* ── Signature ── */
+.sig-hint {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #767676;
+    margin-bottom: 0.875em;
+}
+
+.sig-canvas-wrapper {
+    border: 1px solid #d0dcea;
+    border-radius: 8px;
+    background: #ffffff;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+#sigCanvas {
+    display: block;
+    touch-action: none;
+    max-width: 100%;
+}
+
+.sig-actions {
+    margin-top: 0.75em;
+}
+
+/* ── Print Label ── */
+.print-label-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    flex-wrap: wrap;
+}
+
+/* ── Buttons — 25px radius ── */
+.primary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1E3A5F;
+    background: #1E3A5F;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.primary-btn:hover {
+    background: #16304f;
+    border-color: #16304f;
+}
+
+.secondary-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.secondary-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+.util-btn {
+    padding: 0.375em 1em;
+    border-radius: 25px;
+    border: 1px solid #d0dcea;
+    background: #f5f7fa;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8125em;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.util-btn:hover {
+    border-color: #1E3A5F;
+    background: #eef2f8;
+    color: #1E3A5F;
+}
+
+/* ── Form Actions Row ── */
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 0.5em;
+    flex-wrap: wrap;
+}
+
+/* ── Back Button ── */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.8125em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.back-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
+
+/* ── Footer — 12px spec ── */
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e6ef;
+    text-align: center;
+    padding: 1.125em 0;
+    margin-top: auto;
+}
+
+.copyright {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #5C5656;
+}
+
+/* ── Tablet & Narrow Screens (≤ 768px) ── */
+@media (max-width: 768px) {
+    .nav-bar { padding: 0.75em 1.25em; }
+
+    .page-wrapper {
+        margin-top: 1.75em;
+        padding: 0 1em 3.75em;
+    }
+
+    .page-title { font-size: 28px; }
+    .section-heading { font-size: 18px; }
+
+    .section-card {
+        padding: 1.125em 1em 1.25em;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .sig-canvas-wrapper {
+        width: 100%;
+    }
+
+    #sigCanvas {
+        width: 100%;
+        height: 160px;
+    }
+
+    .photo-grid img {
+        width: 120px;
+        height: 90px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .back-btn {
+        display: flex;
+        margin: 1em auto 0;
+    }
+}
+
+/* ── Print Styles ─────────────────────────────────────────────────────────────
+   Triggered automatically after ticket submission via window.print().
+   Goal: a clean single-page receipt with only the essential customer and device
+   info. Everything interactive (buttons, nav, signature canvas, photos, terms)
+   is hidden. The info grid is forced to two columns and font sizes are reduced
+   slightly so the summary fits on one page comfortably.
+   ─────────────────────────────────────────────────────────────────────────── */
+@media print {
+
+    /* Hide all interactive and non-essential elements */
+    .nav-bar,
+    .sig-hint,
+    .sig-canvas-wrapper,
+    .sig-actions,
+    .terms-box,
+    .photo-grid,
+    .form-actions,
+    .print-label-row,
+    footer,
+    #photos-heading + .photo-grid {
+        display: none !important;
+    }
+
+    /* Also hide the Photos, Terms, Signature, and Print Label cards entirely */
+    .section-card:has(#photos-heading),
+    .section-card:has(.terms-box),
+    .section-card:has(#sigCanvas),
+    .section-card:has(#printLabelBtn) {
+        display: none !important;
+    }
+
+    /* Reset body for print */
+    body {
+        background: #ffffff;
+        font-size: 12px;
+        color: #000000;
+    }
+
+    /* Remove page wrapper constraints */
+    .page-wrapper {
+        max-width: 100%;
+        margin: 0;
+        padding: 0.5cm 1cm;
+    }
+
+    /* Compact page title */
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 0.5em;
+    }
+
+    /* Tighten up section cards */
+    .section-card {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 0.5em 0.75em;
+        margin-bottom: 0.5em;
+        break-inside: avoid;
+    }
+
+    /* Subheadings */
+    .section-heading {
+        font-size: 13px;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.25em;
+    }
+
+    /* Force two-column info grid so it fits on one page */
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.4em 1em;
+    }
+
+    /* Labels and values */
+    .info-label {
+        font-size: 9px;
+        color: #555;
+    }
+
+    .info-value {
+        font-size: 16px;
+        color: #000;
+    }
+
+    /* Staff notes full width */
+    .info-field.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .info-value.notes {
+        background: none;
+        border: none;
+        padding: 0;
+    }
+
+    /* Customer badge */
+    .customer-badge {
+        font-size: 9px;
+    }
+
+    /* Ensure nothing breaks across pages unexpectedly */
+    .section-card {
+        page-break-inside: avoid;
+    }
+
+    /* Print header — show shop name and date at top */
+.page-wrapper::before {
+        /* 1. Content & Text */
+        /* We use \a for a newline. Note the spaces before the date to push it right. */
+        content: "TICKET #: ___________________                           "  "\a" attr(data-print-date)  "\a " "INVOICE #: ___________________     " attr(data-print-time);
+        
+        /* 2. Layout & Alignment */
+        display: block;
+        white-space: pre;          /* Required for \a to work */
+        text-align: right;         /* Aligns the whole text block to the right */
+        line-height: 1.2;          /* Tightens the vertical gap between lines */
+        
+        /* 3. Font Styling */
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        color: #000000;
+        font-weight: bold;
+
+        /* 4. The Logo */
+        background-image: url('https://customer.altismsp.com/assets/images/altisMSPLogoSmall.png');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+
+        /* 5. Spacing & Borders */
+        min-height: 80px;
+        margin-bottom: 0.75em;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.25em;
+        box-sizing: border-box;
+    }
+}
+
+/* ── Label Amount Row ─────────────────────────────────────────────────────────
+   Styles for the qty +/- counter and Print Label button in the Print Label
+   section card. These mirror the equivalent styles in ticket.css.
+   ─────────────────────────────────────────────────────────────────────────── */
+.label-amount-row {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    flex-wrap: wrap;
+}
+
+/* +/- circle buttons */
+.qty-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-size: 1.125em;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.qty-btn:hover {
+    background: #1E3A5F;
+    color: #fff;
+}
+
+/* Numeric quantity display */
+.qty-input {
+    width: 48px;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    border: 1px solid #d0dcea;
+    border-radius: 6px;
+    padding: 0.25em 0;
+    color: #1a1a1a;
+    background: #f5f7fa;
+}
+
+/* Print Label button */
+.print-btn {
+    padding: 0.6875em 1.75em;
+    border-radius: 25px;
+    border: 2px solid #1E3A5F;
+    background: transparent;
+    color: #1E3A5F;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 0.9375em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.print-btn:hover {
+    background: #1E3A5F;
+    color: #ffffff;
+}
